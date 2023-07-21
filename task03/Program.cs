@@ -31,17 +31,3 @@ void PrintArray(int[] array)
 int sizeArray = Prompt("Введите длину массива: ");
 int[] array = Input(sizeArray);
 PrintArray(array);
-
-// void Input(int size)
-// {
-//     int[] array = new int[size];
-//     Console.Write("Введите через пробел числа, которые будут добавлены в массив: ");
-//     string[] input = Console.ReadLine()!.Split(' ');
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i] = int.Parse(input[i]);
-//         Console.Write($"{array[i]}, ");
-//     }
-// }
-
-// Input(sizeArray);
