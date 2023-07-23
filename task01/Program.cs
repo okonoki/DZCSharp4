@@ -9,14 +9,36 @@ int Prompt(string message)
     return int.Parse(Console.ReadLine());
 }
 
-int A = Prompt("Введите число A: ");
-int B = Prompt("Введите число B: ");
-
-double ToThePowerOfB(int A, int B)
+double Power(int powerBase, int exponent)
 {
-    double result = Math.Pow(A, B);
-    return result;
+    return Math.Pow(powerBase, exponent);
 }
 
-double result = ToThePowerOfB(A, B);
-Console.Write($"{A}, {B} -> {result}");
+// int Power(int powerBase, int exponent)
+// {
+//     int power = 1;
+//     for (int i = 0; i < exponent; i++)
+//     {
+//         power *= powerBase;
+//     }
+//     return power;
+// }
+
+bool ValidateExponent(int exponent)
+{
+    if (exponent < 0)
+    {
+        Console.WriteLine("Показатель степени не должен быть меньше нуля!");
+        return false;
+    }
+    return true;
+}
+
+
+int powerBase = Prompt("Введите основание: ");
+int exponent = Prompt("Введите показатель степени: ");
+
+if (ValidateExponent (exponent))
+{
+ Console.Write($"Число {powerBase} в степени {exponent} равно {Power(powerBase, exponent)}");
+}
