@@ -10,19 +10,16 @@ int Prompt(string message)
     return int.Parse(Console.ReadLine());
 }
 
-int N = Prompt("Введите число: ");
-
-void SumFigure(int N)
+int SumFigure(int N)
 {
-    int n = 0;
     int sum = 0;
     while (N > 0)
     {
-        n = N % 10;
-        sum = sum + n;
+        sum += N % 10;
         N = N / 10;
     }
-    Console.Write(sum);
+    return sum;
 }
 
-SumFigure(N);
+int N = Prompt("Введите число: ");
+Console.Write($"Сумма всех цифр в числе {N} равна {SumFigure(N)}");
