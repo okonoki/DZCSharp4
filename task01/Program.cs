@@ -6,7 +6,7 @@
 int Prompt(string message)
 {
     Console.Write(message);
-    return int.Parse(Console.ReadLine());
+    return int.Parse(Console.ReadLine()!);
 }
 
 double Power(int powerBase, int exponent)
